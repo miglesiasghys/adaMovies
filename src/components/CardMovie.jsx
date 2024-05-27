@@ -1,5 +1,7 @@
-import { ImageListItem, ImageListItemBar, IconButton, Grid } from "@mui/material"
-import InfoIcon from '@mui/icons-material/Info';
+import { Link } from "react-router-dom";
+//MUI
+import { ImageListItem, ImageListItemBar, Grid, Tooltip} from "@mui/material"
+import AddCircleOutlineIcon from '@mui/icons-material/AddCircleOutline';
 
 export default function CardMovie({ movie }) {
     //URL PARA BUSCAR CADA IMAGEN
@@ -17,12 +19,14 @@ export default function CardMovie({ movie }) {
                 <ImageListItemBar
                     title={movie.title}
                     actionIcon={
-                        <IconButton
+                        <Tooltip title="See more"
                             sx={{ color: 'rgba(255, 255, 255, 0.54)' }}
                             aria-label={`info about ${movie.title}`}
                         >
-                            <InfoIcon />
-                        </IconButton>
+                            <Link to={`/detail/${movie.id}`}>
+                                <AddCircleOutlineIcon sx={{color:"#F5D57B"}}/>
+                            </Link>
+                        </Tooltip>
                     }
                 />
             </ImageListItem>
