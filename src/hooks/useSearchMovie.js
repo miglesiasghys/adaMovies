@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { useState } from 'react';
 
-export default function useMovies() {
+export default function useSearchMovies() {
   const apiURL = "https://api.themoviedb.org/3"
   const apiKey = "9d5915effba963e63144af4301d96aca"
 
@@ -9,20 +9,18 @@ export default function useMovies() {
   const [page, setPage] = useState(1)
   const [totalPages, setTotalPages] = useState(1)
 
-  //LLAMADA A LA API PARA TRAER LAS PELICULAS SEGUN EL RANKING: POPULARES O PUNTUADAS
-  async function getMovies(ranking) {
+  //LLAMADA A LA API PARA BUSCADOR
+  async function getSearchMovies(value) {
     try {
       const { data } = await axios(
-        `${apiURL}/movie/${ranking}?page=${page}`, {
+        `${apiURL}/search/movie?query=${value}&page=${page}`, {
         params: {
           api_key: apiKey,
         }
       }
       )
-      setTimeout(() => {
-        setMovies(data.results);
-        setTotalPages(data.total_pages)
-      }, 1000);
+      setMovies(data.results);
+      setTotalPages(data.total_pages)
     } catch (error) {
       console.log(error)
     }
@@ -34,10 +32,10 @@ export default function useMovies() {
   };
 
   return {
-    getMovies,
+    getSearchMovies,
     movies,
-    totalPages,
     page,
+    totalPages,
     handleChange
   }
 }
