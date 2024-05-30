@@ -21,7 +21,7 @@ export default function DetailMovie() {
   const [year] = date.split('-')
 
   //URL PARA BUSCAR CADA IMAGEN
-  const imgURL = "http://image.tmdb.org/t/p/original"
+  const imgURL = "https://image.tmdb.org/t/p/original"
 
   useEffect(() => {
     getDetailMovie(idMovie)

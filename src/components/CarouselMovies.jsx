@@ -11,7 +11,7 @@ import AddCircleOutlineIcon from '@mui/icons-material/AddCircleOutline';
 export default function CarouselMovies() {
 
   //URL PARA BUSCAR CADA IMAGEN
-  const imgURL = "http://image.tmdb.org/t/p/original"
+  const imgURL = "https://image.tmdb.org/t/p/original"
 
   const { getMovies, movies } = useMovies()
 
