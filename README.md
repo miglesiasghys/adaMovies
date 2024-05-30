@@ -1,8 +1,14 @@
 Películas-React
+
+
 ⚙️ Consigna
+
+
 En este proyecto vas a crear una aplicación que permita conectarse a una API de películas, los estrenos, populares y mejor puntadas. Aplicarás lo aprendido para consumir y manipular la información de tu aplicación.
 
 💬 Comentarios
+
+
 A este proyecto se le suma un nuevo grado de complejidad: tenemos que trabajar diferentes secciones y componentes haciendo uso de useEffect y useFetch.
 
 Por eso, es recomendable ir haciendo las funcionalidades una por una. Al empezar una nueva funcionalidad, deberíamos crear una nueva brach y ponerle un nombre adecuado (por ejemplo, vista-principal, ultimos-lanzamientos, populares, etc ), en esa branch ocuparnos única y exclusivamente de esa funcionalidad, y una vez terminada, mergearla a main y continuar con la siguiente funcionalidad, repetiendo el proceso.
@@ -10,6 +16,8 @@ Por eso, es recomendable ir haciendo las funcionalidades una por una. Al empezar
 Si tenemos que mejorar o arreglar una funcionalidad ya agregada, deberíamos hacer una nueva branch para dicho fix o refactor, y nombrarla adecuadamente (por ejemplo, refactor-populares, fix-buscador), y una vez finalizada la mejora o correción, mergearla a main.
 
 👍 Criterios de aceptación
+
+
 Los requisitos mínimos para que el proyecto sea considerado para la entrega son:
 
 Debe respetar el diseño general dado. Pueden modificarse a gusto colores, fondo, fuentes e íconos
@@ -33,6 +41,10 @@ La vista de Buscador debe contar con un input, el cual al ir escribiendo se debe
 Todas las vistas deben de tener un footer.
 
 🧰 Recursos
+
+
 API - API películas
 Material UI - Framework CSS
 Axios
+Vercel
+react-youtube
