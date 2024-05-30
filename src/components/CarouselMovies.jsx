@@ -31,7 +31,7 @@ export default function CarouselMovies() {
 
   return (
     <Slider {...settings} autoplay  >
-      {movies ? movies.map((movie) =>
+      {movies ? movies?.map((movie) =>
         <Container key={crypto.randomUUID()} disableGutters maxWidth="xl" sx={{ margin: "0", height: "95vh", backgroundImage: `url(${imgURL}${movie.backdrop_path})`, backgroundPosition: "center", backgroundSize: "cover" }}>
           <Grid container columns={{ lg: 2, xs: 1 }} rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }} sx={{ height: "100%", display: "flex", justifyContent: "center", alignItems: "center" }}>
             <Grid item sx={{ height: "100%", width: "50%", display: "flex", alignItems: "center", justifyContent: "center" }}>

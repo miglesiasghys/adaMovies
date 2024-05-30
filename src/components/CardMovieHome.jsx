@@ -2,12 +2,12 @@ import { Link } from "react-router-dom";
 import { useContext } from "react";
 import { FavoritesContext } from "../context/FavoritesContext";
 //MUI
-import { IconButton, ImageListItem, ImageListItemBar, Grid, Tooltip, Box } from "@mui/material"
+import { ImageListItem, ImageListItemBar, Grid, Tooltip, Box, IconButton } from "@mui/material"
 import AddCircleOutlineIcon from '@mui/icons-material/AddCircleOutline';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 
-export default function CardMovie({ movie }) {
+export default function CardMovieHome({ movie }) {
   //URL PARA BUSCAR CADA IMAGEN
   const imgURL = "http://image.tmdb.org/t/p/original"
 
@@ -15,15 +15,8 @@ export default function CardMovie({ movie }) {
   const { addFavorites, removeFavorites, isFavorite } = useContext(FavoritesContext)
 
   return (
-    <Grid item >
-      <ImageListItem sx={{
-        width: "39vh", minHeight: "50vh", transition: 'transform 0.3s, box-shadow 0.3s',
-        '&:hover': {
-          transform: 'translateY(-20px)',
-          boxShadow: 3
-        }
-      }}
-      >
+    <Grid item>
+      <ImageListItem sx={{ maxWidth: "27vh" }}>
         <img
           srcSet={`${imgURL}${movie.poster_path}`}
           src={`${imgURL}${movie.poster_path}`}
@@ -59,8 +52,7 @@ export default function CardMovie({ movie }) {
                 )}
               </Tooltip>
             </Box>
-          }
-        />
+          } />
       </ImageListItem>
     </Grid>
   )
