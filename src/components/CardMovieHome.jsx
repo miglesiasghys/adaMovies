@@ -9,7 +9,7 @@ import FavoriteIcon from '@mui/icons-material/Favorite';
 
 export default function CardMovieHome({ movie }) {
   //URL PARA BUSCAR CADA IMAGEN
-  const imgURL = "http://image.tmdb.org/t/p/original"
+  const imgURL = "https://image.tmdb.org/t/p/original"
 
   //Context
   const { addFavorites, removeFavorites, isFavorite } = useContext(FavoritesContext)
